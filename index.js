@@ -17,6 +17,5 @@ const schedule = require("./scheduleStockPrices");
 })();
 
 async function start(conn) {
-  const results = await StockPricePerDay.find({ date: { $gte: new Date('2021-04-01') } })
-  console.log(results)
+  schedule();
 }
